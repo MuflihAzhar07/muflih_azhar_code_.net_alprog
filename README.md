@@ -1,4 +1,4 @@
-```python
+python
 readme_content = """# Aplikasi Verifikasi Wajah Berbasis AI & NLP
 
 Tugas Besar (Tubes) Mata Kuliah **Algoritma dan Pemrograman** (VI231208).
