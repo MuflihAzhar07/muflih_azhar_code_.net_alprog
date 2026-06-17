@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VitalGuard.FaceVerificationPage"
+             BackgroundColor="#F3F4F6">
+
+    <ScrollView VerticalOptions="CenterAndExpand">
+        <Border StrokeThickness="0"
+                BackgroundColor="White"
+                Padding="30"
+                Margin="20"
+                WidthRequest="440"
+                HorizontalOptions="Center"
+                StrokeShape="RoundRectangle 16">
+
+            <Border.Shadow>
+                <Shadow Brush="#000000" Offset="0,6" Radius="12" Opacity="0.06" />
+            </Border.Shadow>
+
+            <VerticalStackLayout Spacing="18">
+
+                <Label x:Name="LabelRole" 
+                       Text="Verifikasi Identitas" 
+                       FontSize="22" 
+                       FontAttributes="Bold" 
+                       HorizontalOptions="Center" 
+                       TextColor="#1F2937" />
+
+                <Label Text="Tingkat Kemiripan Diperlukan: &gt;70%" 
+                       FontSize="13" 
+                       HorizontalOptions="Center" 
+                       TextColor="#4B5563" 
+                       Margin="0,0,0,5"/>
+
+                <Border HeightRequest="300" 
+                        StrokeThickness="1"
+                        Stroke="#E5E7EB"
+                        BackgroundColor="#E5E7EB"
+                        StrokeShape="RoundRectangle 12">
+
+                    <Image x:Name="CameraPreview" 
+                           Aspect="AspectFill" />
+                </Border>
+
+                <Button Text="VERIFIKASI WAJAH SAYA" 
+                        FontAttributes="Bold" 
+                        BackgroundColor="#10B981" 
+                        TextColor="White" 
+                        CornerRadius="8" 
+                        HeightRequest="45"
+                        Margin="0,10,0,0"
+                        Clicked="OnVerifyClicked" />
+
+                <Button x:Name="BtnLanjut" 
+                        Text="AKSES DITERIMA - MASUK DASHBOARD" 
+                        IsVisible="False" 
+                        FontAttributes="Bold" 
+                        BackgroundColor="#2563EB" 
+                        TextColor="White" 
+                        CornerRadius="8" 
+                        HeightRequest="45"
+                        Clicked="OnNextClicked" />
+
+                <Button Text="Kembali ke Login" 
+                        BackgroundColor="Transparent" 
+                        TextColor="#EF4444" 
+                        TextTransform="None"
+                        FontSize="14"
+                        Clicked="OnCancelClicked" />
+
+            </VerticalStackLayout>
+        </Border>
+    </ScrollView>
+</ContentPage>
